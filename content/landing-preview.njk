@@ -22,17 +22,18 @@ eleventyExcludeFromCollections: true
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
 <script>
-  tailwind.config = {
+  window.tailwind = window.tailwind || {};
+  window.tailwind.config = {
     darkMode: 'class',
     theme: {
       extend: {
         fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] }
       }
     }
-  }
+  };
 </script>
+<script src="https://cdn.tailwindcss.com"></script>
 <style>
   :root { --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif; }
   body { font-family: var(--font-sans); }
@@ -41,6 +42,25 @@ eleventyExcludeFromCollections: true
     50% { opacity: 0; }
   }
   .animate-blink { animation: blink 1s step-end infinite; }
+
+  /* Dropdown panels: explicit CSS, independent of Tailwind's runtime class generation */
+  .dropdown-panel {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .dropdown-panel.is-open {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+
+  /* Hamburger -> X */
+  #bar1, #bar2, #bar3 { transition: all 0.3s ease; }
+  #menu-btn.is-open #bar1 { transform: translateY(7px) rotate(45deg); }
+  #menu-btn.is-open #bar2 { opacity: 0; }
+  #menu-btn.is-open #bar3 { transform: translateY(-7px) rotate(-45deg); }
 </style>
 </head>
 <body class="relative bg-gradient-to-br from-white via-white to-neutral-100 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-900 text-neutral-900 dark:text-white font-sans selection:bg-neutral-200 dark:selection:bg-white/20 selection:text-neutral-900 dark:selection:text-white antialiased overflow-x-hidden min-h-screen transition-colors duration-300">
@@ -72,7 +92,7 @@ eleventyExcludeFromCollections: true
         <button id="start-reading-btn" class="text-[23px] text-neutral-900 dark:text-white underline underline-offset-2 hover:opacity-60 transition-opacity" aria-expanded="false">Start reading</button>
 
         <!-- Desktop "Start reading" dropdown -->
-        <div id="start-reading-menu" class="absolute right-0 top-full mt-3 z-[9] w-48 rounded-2xl bg-white/95 dark:bg-black/95 backdrop-blur-sm border border-black/10 dark:border-white/10 shadow-xl overflow-hidden origin-top-right opacity-0 scale-95 pointer-events-none transition-all duration-200 flex flex-col text-base text-neutral-900 dark:text-white">
+        <div id="start-reading-menu" class="dropdown-panel absolute right-0 top-full mt-3 z-[9] w-48 rounded-2xl bg-white/95 dark:bg-black/95 backdrop-blur-sm border border-black/10 dark:border-white/10 shadow-xl overflow-hidden origin-top-right flex flex-col text-base text-neutral-900 dark:text-white">
           <a href="/fatawa/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors border-b border-black/10 dark:border-white/10">Fatawa</a>
           <a href="/sciences/aqeedah/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors border-b border-black/10 dark:border-white/10">Aqeedah</a>
           <a href="/sciences/hadith/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors border-b border-black/10 dark:border-white/10">Hadith</a>
@@ -88,7 +108,7 @@ eleventyExcludeFromCollections: true
         </button>
 
         <!-- Mobile dropdown menu -->
-        <div id="mobile-overlay" class="absolute right-0 top-full mt-3 z-[9] w-48 rounded-2xl bg-white/95 dark:bg-black/95 backdrop-blur-sm border border-black/10 dark:border-white/10 shadow-xl overflow-hidden origin-top-right opacity-0 scale-95 pointer-events-none transition-all duration-200 flex flex-col text-base text-neutral-900 dark:text-white">
+        <div id="mobile-overlay" class="dropdown-panel absolute right-0 top-full mt-3 z-[9] w-48 rounded-2xl bg-white/95 dark:bg-black/95 backdrop-blur-sm border border-black/10 dark:border-white/10 shadow-xl overflow-hidden origin-top-right flex flex-col text-base text-neutral-900 dark:text-white">
           <a href="/fatawa/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors border-b border-black/10 dark:border-white/10">Fatawa</a>
           <a href="/sciences/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors border-b border-black/10 dark:border-white/10">Sciences</a>
           <a href="/biography/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors border-b border-black/10 dark:border-white/10">Biography</a>
@@ -132,35 +152,20 @@ eleventyExcludeFromCollections: true
   // Mobile menu
   var menuBtn = document.getElementById('menu-btn');
   var overlay = document.getElementById('mobile-overlay');
-  var bar1 = document.getElementById('bar1'), bar2 = document.getElementById('bar2'), bar3 = document.getElementById('bar3');
   var open = false;
+  function setMenuOpen(next) {
+    open = next;
+    menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.classList.toggle('is-open', open);
+    overlay.classList.toggle('is-open', open);
+  }
   menuBtn.addEventListener('click', function (e) {
     e.stopPropagation();
-    open = !open;
-    menuBtn.setAttribute('aria-expanded', open);
-    if (open) {
-      overlay.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
-      overlay.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
-      bar1.classList.add('rotate-45', 'translate-y-[7px]');
-      bar2.classList.add('opacity-0');
-      bar3.classList.add('-rotate-45', '-translate-y-[7px]');
-    } else {
-      overlay.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-      overlay.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
-      bar1.classList.remove('rotate-45', 'translate-y-[7px]');
-      bar2.classList.remove('opacity-0');
-      bar3.classList.remove('-rotate-45', '-translate-y-[7px]');
-    }
+    setMenuOpen(!open);
   });
   document.addEventListener('click', function (e) {
     if (open && !overlay.contains(e.target) && !menuBtn.contains(e.target)) {
-      open = false;
-      menuBtn.setAttribute('aria-expanded', false);
-      overlay.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-      overlay.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
-      bar1.classList.remove('rotate-45', 'translate-y-[7px]');
-      bar2.classList.remove('opacity-0');
-      bar3.classList.remove('-rotate-45', '-translate-y-[7px]');
+      setMenuOpen(false);
     }
   });
 
@@ -168,24 +173,18 @@ eleventyExcludeFromCollections: true
   var startBtn = document.getElementById('start-reading-btn');
   var startMenu = document.getElementById('start-reading-menu');
   var startOpen = false;
+  function setStartOpen(next) {
+    startOpen = next;
+    startBtn.setAttribute('aria-expanded', startOpen);
+    startMenu.classList.toggle('is-open', startOpen);
+  }
   startBtn.addEventListener('click', function (e) {
     e.stopPropagation();
-    startOpen = !startOpen;
-    startBtn.setAttribute('aria-expanded', startOpen);
-    if (startOpen) {
-      startMenu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
-      startMenu.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
-    } else {
-      startMenu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-      startMenu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
-    }
+    setStartOpen(!startOpen);
   });
   document.addEventListener('click', function (e) {
     if (startOpen && !startMenu.contains(e.target) && !startBtn.contains(e.target)) {
-      startOpen = false;
-      startBtn.setAttribute('aria-expanded', false);
-      startMenu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
-      startMenu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
+      setStartOpen(false);
     }
   });
 
