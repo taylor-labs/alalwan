@@ -1,0 +1,278 @@
+---
+permalink: /landing-preview/
+title: Landing Preview
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>al-alwan — Landing Preview</title>
+<meta name="robots" content="noindex">
+<script>
+  (function () {
+    var saved = localStorage.getItem('alwan_theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (saved === 'dark' || (!saved && prefersDark)) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] }
+      }
+    }
+  }
+</script>
+<style>
+  :root { --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+  body { font-family: var(--font-sans); }
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  .animate-blink { animation: blink 1s step-end infinite; }
+</style>
+</head>
+<body class="relative bg-gradient-to-br from-white via-white to-neutral-100 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-900 text-neutral-900 dark:text-white font-sans selection:bg-neutral-200 dark:selection:bg-white/20 selection:text-neutral-900 dark:selection:text-white antialiased overflow-x-hidden min-h-screen transition-colors duration-300">
+
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-10 px-5 sm:px-8 py-4 sm:py-5 flex flex-row justify-between items-center bg-transparent">
+    <div class="flex flex-row items-center gap-3">
+      <span class="text-[21px] sm:text-[26px] tracking-tight text-neutral-900 dark:text-white font-medium select-none">al-alwan&reg;</span>
+      <span class="text-[25px] sm:text-[30px] text-neutral-900 dark:text-white select-none tracking-[-0.02em] font-medium leading-none mb-1">&#10033;</span>
+    </div>
+
+    <nav class="hidden md:flex flex-row text-[23px] text-neutral-900 dark:text-white">
+      <a href="/fatawa/" class="hover:opacity-60 transition-opacity">Fatawa</a>
+      <span class="opacity-40">,&nbsp;</span>
+      <a href="/sciences/" class="hover:opacity-60 transition-opacity">Sciences</a>
+      <span class="opacity-40">,&nbsp;</span>
+      <a href="/biography/" class="hover:opacity-60 transition-opacity">Biography</a>
+      <span class="opacity-40">,&nbsp;</span>
+      <a href="/about/" class="hover:opacity-60 transition-opacity">About</a>
+    </nav>
+
+    <div class="flex flex-row items-center gap-4 sm:gap-5">
+      <button id="theme-toggle" aria-label="Toggle dark mode" class="w-8 h-8 flex items-center justify-center text-neutral-900 dark:text-white hover:opacity-60 transition-opacity">
+        <svg id="icon-moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" class="w-[18px] h-[18px]"><path d="M13.5 9.5A6 6 0 0 1 6.5 2.5a6 6 0 1 0 7 7z"/></svg>
+        <svg id="icon-sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" class="w-[18px] h-[18px] hidden"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.22 3.22l1.42 1.42M11.36 11.36l1.42 1.42M3.22 12.78l1.42-1.42M11.36 4.64l1.42-1.42"/></svg>
+      </button>
+
+      <div class="hidden md:block relative">
+        <button id="start-reading-btn" class="text-[23px] text-neutral-900 dark:text-white underline underline-offset-2 hover:opacity-60 transition-opacity" aria-expanded="false">Start reading</button>
+
+        <!-- Desktop "Start reading" dropdown -->
+        <div id="start-reading-menu" class="absolute right-0 top-full mt-3 z-[9] w-48 rounded-2xl bg-white/95 dark:bg-black/95 backdrop-blur-sm border border-black/10 dark:border-white/10 shadow-xl overflow-hidden origin-top-right opacity-0 scale-95 pointer-events-none transition-all duration-200 flex flex-col text-base text-neutral-900 dark:text-white">
+          <a href="/fatawa/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors border-b border-black/10 dark:border-white/10">Fatawa</a>
+          <a href="/sciences/aqeedah/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors border-b border-black/10 dark:border-white/10">Aqeedah</a>
+          <a href="/sciences/hadith/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors border-b border-black/10 dark:border-white/10">Hadith</a>
+          <a href="/biography/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors">Biography</a>
+        </div>
+      </div>
+
+      <div class="md:hidden relative">
+        <button id="menu-btn" class="flex flex-col justify-center items-center gap-[5px] w-8 h-8" aria-label="Open menu" aria-expanded="false">
+          <span id="bar1" class="w-6 h-[2px] bg-neutral-900 dark:bg-white transition-all duration-300"></span>
+          <span id="bar2" class="w-6 h-[2px] bg-neutral-900 dark:bg-white transition-all duration-300"></span>
+          <span id="bar3" class="w-6 h-[2px] bg-neutral-900 dark:bg-white transition-all duration-300"></span>
+        </button>
+
+        <!-- Mobile dropdown menu -->
+        <div id="mobile-overlay" class="absolute right-0 top-full mt-3 z-[9] w-48 rounded-2xl bg-white/95 dark:bg-black/95 backdrop-blur-sm border border-black/10 dark:border-white/10 shadow-xl overflow-hidden origin-top-right opacity-0 scale-95 pointer-events-none transition-all duration-200 flex flex-col text-base text-neutral-900 dark:text-white">
+          <a href="/fatawa/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors border-b border-black/10 dark:border-white/10">Fatawa</a>
+          <a href="/sciences/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors border-b border-black/10 dark:border-white/10">Sciences</a>
+          <a href="/biography/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors border-b border-black/10 dark:border-white/10">Biography</a>
+          <a href="/about/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors border-b border-black/10 dark:border-white/10">About</a>
+          <a href="/fatawa/" class="px-5 py-3 hover:bg-black/5 dark:hover:bg-white/10 transition-colors underline underline-offset-2">Start reading</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <div class="relative z-10 flex flex-col w-full min-h-screen">
+    <main id="spade-hero" class="w-full max-w-7xl mx-auto px-6 py-12 flex-1 flex flex-col justify-center">
+
+      <div id="headline-wrap" class="opacity-0 translate-y-5 transition-all duration-[600ms] ease-out">
+        <h1 id="headline" class="text-5xl md:text-6xl lg:text-[76px] font-normal tracking-tight text-neutral-900 dark:text-white leading-[1.08] mb-8 select-none w-full whitespace-pre-wrap">&nbsp;</h1>
+      </div>
+
+      <div id="sub-wrap" class="opacity-0 translate-y-5 transition-all duration-[600ms] ease-out">
+        <p class="text-lg md:text-xl text-neutral-600 dark:text-white/60 leading-relaxed font-normal mb-14 max-w-2xl">
+          A curated archive of scholarly works, fatawa, and translations. <br>
+          Search the library and pick up exactly where your question begins.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-2xl font-medium tracking-tight mb-6 text-neutral-900 dark:text-white">Browse</p>
+
+        <div class="relative max-w-xl">
+          <input type="search" id="hero-search" placeholder="Search fatawa, sciences, biography…" autocomplete="off"
+            class="w-full bg-black/[0.03] dark:bg-white/5 border border-black/10 dark:border-white/15 rounded-full px-6 py-3.5 text-neutral-900 dark:text-white placeholder-neutral-400 dark:placeholder-white/40 focus:outline-none focus:border-black/30 dark:focus:border-white/40 transition-colors">
+          <div id="hero-search-results" class="absolute left-0 right-0 mt-2 bg-white/95 dark:bg-black/95 border border-black/10 dark:border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm max-h-80 overflow-y-auto empty:hidden"></div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+<script>
+(function () {
+  // Mobile menu
+  var menuBtn = document.getElementById('menu-btn');
+  var overlay = document.getElementById('mobile-overlay');
+  var bar1 = document.getElementById('bar1'), bar2 = document.getElementById('bar2'), bar3 = document.getElementById('bar3');
+  var open = false;
+  menuBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    open = !open;
+    menuBtn.setAttribute('aria-expanded', open);
+    if (open) {
+      overlay.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+      overlay.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
+      bar1.classList.add('rotate-45', 'translate-y-[7px]');
+      bar2.classList.add('opacity-0');
+      bar3.classList.add('-rotate-45', '-translate-y-[7px]');
+    } else {
+      overlay.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+      overlay.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
+      bar1.classList.remove('rotate-45', 'translate-y-[7px]');
+      bar2.classList.remove('opacity-0');
+      bar3.classList.remove('-rotate-45', '-translate-y-[7px]');
+    }
+  });
+  document.addEventListener('click', function (e) {
+    if (open && !overlay.contains(e.target) && !menuBtn.contains(e.target)) {
+      open = false;
+      menuBtn.setAttribute('aria-expanded', false);
+      overlay.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+      overlay.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
+      bar1.classList.remove('rotate-45', 'translate-y-[7px]');
+      bar2.classList.remove('opacity-0');
+      bar3.classList.remove('-rotate-45', '-translate-y-[7px]');
+    }
+  });
+
+  // "Start reading" dropdown (desktop)
+  var startBtn = document.getElementById('start-reading-btn');
+  var startMenu = document.getElementById('start-reading-menu');
+  var startOpen = false;
+  startBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    startOpen = !startOpen;
+    startBtn.setAttribute('aria-expanded', startOpen);
+    if (startOpen) {
+      startMenu.classList.remove('opacity-0', 'scale-95', 'pointer-events-none');
+      startMenu.classList.add('opacity-100', 'scale-100', 'pointer-events-auto');
+    } else {
+      startMenu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+      startMenu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
+    }
+  });
+  document.addEventListener('click', function (e) {
+    if (startOpen && !startMenu.contains(e.target) && !startBtn.contains(e.target)) {
+      startOpen = false;
+      startBtn.setAttribute('aria-expanded', false);
+      startMenu.classList.add('opacity-0', 'scale-95', 'pointer-events-none');
+      startMenu.classList.remove('opacity-100', 'scale-100', 'pointer-events-auto');
+    }
+  });
+
+  // Drop-in animations
+  requestAnimationFrame(function () {
+    var headlineWrap = document.getElementById('headline-wrap');
+    var subWrap = document.getElementById('sub-wrap');
+    headlineWrap.classList.remove('opacity-0', 'translate-y-5');
+    setTimeout(function () {
+      subWrap.classList.remove('opacity-0', 'translate-y-5');
+    }, 100);
+  });
+
+  // Typewriter
+  function typewriter(el, text, speed, startDelay, onDone) {
+    var i = 0;
+    setTimeout(function () {
+      var cursor = document.createElement('span');
+      cursor.className = 'inline-block w-[2px] h-[1.1em] bg-current align-middle ml-[2px] animate-blink';
+      var interval = setInterval(function () {
+        i++;
+        el.textContent = text.slice(0, i);
+        el.appendChild(cursor);
+        if (i >= text.length) {
+          clearInterval(interval);
+          cursor.remove();
+          if (onDone) onDone();
+        }
+      }, speed);
+    }, startDelay);
+  }
+
+  var headline = document.getElementById('headline');
+  headline.innerHTML = '';
+  typewriter(headline, "the works of\nsulayman al-alwan.", 38, 600);
+
+  // Site search
+  var searchInput = document.getElementById('hero-search');
+  var searchResults = document.getElementById('hero-search-results');
+  var searchIndex = null;
+
+  searchInput.addEventListener('input', function () {
+    var q = this.value.trim().toLowerCase();
+    searchResults.innerHTML = '';
+    if (!q) return;
+    if (!searchIndex) {
+      fetch('/search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) { searchIndex = data; renderSearch(q); });
+    } else {
+      renderSearch(q);
+    }
+  });
+
+  function renderSearch(q) {
+    var hits = searchIndex.filter(function (item) {
+      return item.title.toLowerCase().indexOf(q) !== -1;
+    }).slice(0, 8);
+    if (!hits.length) {
+      searchResults.innerHTML = '<p class="px-5 py-3 text-sm text-neutral-500 dark:text-white/50 italic">No results.</p>';
+      return;
+    }
+    searchResults.innerHTML = hits.map(function (item) {
+      return '<a href="' + item.url + '" class="block px-5 py-3 text-sm text-neutral-900 dark:text-white hover:bg-black/5 dark:hover:bg-white/10 transition-colors border-b border-black/5 dark:border-white/5 last:border-b-0">' +
+        '<span class="text-neutral-400 dark:text-white/40 uppercase text-[10px] tracking-wide mr-2">' + item.type + '</span>' + item.title +
+        '</a>';
+    }).join('');
+  }
+
+  // Theme toggle
+  var themeToggle = document.getElementById('theme-toggle');
+  var iconMoon = document.getElementById('icon-moon');
+  var iconSun = document.getElementById('icon-sun');
+
+  function applyThemeIcon() {
+    var dark = document.documentElement.classList.contains('dark');
+    iconMoon.classList.toggle('hidden', dark);
+    iconSun.classList.toggle('hidden', !dark);
+  }
+  applyThemeIcon();
+
+  themeToggle.addEventListener('click', function () {
+    var dark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('alwan_theme', dark ? 'dark' : 'light');
+    applyThemeIcon();
+  });
+})();
+</script>
+</body>
+</html>
