@@ -91,7 +91,7 @@ header {
 }
 
 .site-banner {
-  height: 44px;
+  height: 52px;
   width: auto;
   display: block;
   filter: invert(1);
@@ -711,7 +711,7 @@ p.search-result {
   #main-nav { display: none; }
   .menu-toggle { display: flex; }
 
-  .site-banner { height: 34px; }
+  .site-banner { height: 40px; }
 
   main, footer {
     padding-left: 1rem;
