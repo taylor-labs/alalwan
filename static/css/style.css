@@ -94,6 +94,12 @@ header {
   height: 44px;
   width: auto;
   display: block;
+  filter: invert(1);
+  transition: filter 0.2s;
+}
+
+[data-theme="dark"] .site-banner {
+  filter: none;
 }
 
 nav {
