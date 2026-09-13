@@ -174,7 +174,7 @@ html[data-lang="ar"] [data-lang-ar] { display: revert; }
 html[data-lang="ar"] [data-lang-en] { display: none; }
 
 .ar-label {
-  font-family: "Scheherazade New", serif;
+  font-family: "Cairo", sans-serif;
   direction: rtl;
   unicode-bidi: isolate;
   text-align: right;
