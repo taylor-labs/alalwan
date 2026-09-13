@@ -603,32 +603,6 @@ p.search-result {
   color: var(--text);
 }
 
-.browse-card--cover {
-  padding: 0;
-  overflow: hidden;
-  width: 220px;
-  min-height: unset;
-  border: none;
-  box-shadow: var(--shadow-md);
-  flex-shrink: 0;
-}
-
-.browse-card--cover img {
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: opacity 0.2s;
-}
-
-.browse-card--cover:hover {
-  border-color: transparent;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-}
-
-.browse-card--cover:hover img {
-  opacity: 0.9;
-}
-
 .browse-card-label {
   font-size: 0.7rem;
   font-weight: 500;
@@ -727,5 +701,4 @@ p.search-result {
   .hero h1 { font-size: 1.75rem; }
 
   .browse-grid { grid-template-columns: repeat(2, 1fr); }
-  .browse-card--cover { width: 100%; }
 }
