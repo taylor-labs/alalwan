@@ -1,18 +1,19 @@
 ---
 layout: layouts/base.njk
 title: Hadith
+title_ar: "الحديث"
 science: hadith
 permalink: /sciences/hadith/
 ---
 
-<h1>Hadith</h1>
+<h1><span data-lang-en>Hadith</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">الحديث</span></h1>
 
 <ul class="entry-list">
 {% for w in collections.works %}
   {% if w.data.sciences and (science in w.data.sciences) %}
     <li>
       <a href="{{ w.url }}">
-        {{ w.data.title }}
+        {% if w.data.title_ar %}<span data-lang-en>{{ w.data.title }}</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">{{ w.data.title_ar }}</span>{% else %}{{ w.data.title }}{% endif %}
         {% if w.data.source %}<span class="entry-meta">{{ w.data.source }}</span>{% endif %}
       </a>
     </li>
@@ -22,7 +23,7 @@ permalink: /sciences/hadith/
   {% if w.data.sciences and (science in w.data.sciences) %}
     <li>
       <a href="{{ w.url }}">
-        {{ w.data.title }}
+        {% if w.data.title_ar %}<span data-lang-en>{{ w.data.title }}</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">{{ w.data.title_ar }}</span>{% else %}{{ w.data.title }}{% endif %}
         {% if w.data.source %}<span class="entry-meta">{{ w.data.source }}</span>{% endif %}
       </a>
     </li>

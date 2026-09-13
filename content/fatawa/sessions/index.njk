@@ -1,13 +1,16 @@
 ---
 layout: layouts/base.njk
 title: Sessions
+title_ar: "الجلسات"
 permalink: /fatawa/sessions/
 ---
 
-<h1>Sessions</h1>
+<h1><span data-lang-en>Sessions</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">الجلسات</span></h1>
 
 <ul class="entry-list">
 {% for s in sessions %}
-  <li><a href="/fatawa/sessions/{{ s.number }}/">{{ s.name }}</a></li>
+  <li><a href="/fatawa/sessions/{{ s.number }}/">
+    {% if s.name_ar %}<span data-lang-en>{{ s.name }}</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">{{ s.name_ar }}</span>{% else %}{{ s.name }}{% endif %}
+  </a></li>
 {% endfor %}
 </ul>

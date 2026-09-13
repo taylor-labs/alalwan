@@ -40,7 +40,9 @@ title: Shaykh Sulayman al-Alwan
   <p class="section-label"><span data-lang-en>Recent Fatawa</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">أحدث الفتاوى</span></p>
   <ul class="entry-list">
     {% for fatwa in collections.fatawa | reverse | limit(5) %}
-    <li><a href="{{ fatwa.url }}">{{ fatwa.data.title }}</a></li>
+    <li><a href="{{ fatwa.url }}">
+      {% if fatwa.data.title_ar %}<span data-lang-en>{{ fatwa.data.title }}</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">{{ fatwa.data.title_ar }}</span>{% else %}{{ fatwa.data.title }}{% endif %}
+    </a></li>
     {% endfor %}
   </ul>
   <a href="/fatawa/" class="view-all"><span data-lang-en>View all fatawa →</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">عرض جميع الفتاوى ←</span></a>
@@ -65,14 +67,17 @@ title: Shaykh Sulayman al-Alwan
     }
   });
 
+  var resultTypeAr = { fatwa: 'فتوى', scholar: 'عالم', poem: 'قصيدة', book: 'كتاب', poet: 'شاعر' };
+
   function render(q) {
+    var isAr = document.documentElement.getAttribute('data-lang') === 'ar';
     const hits = index.filter(item => item.title.toLowerCase().includes(q)).slice(0, 10);
     if (!hits.length) {
-      results.innerHTML = '<p class="search-result">No results.</p>';
+      results.innerHTML = '<p class="search-result">' + (isAr ? 'لا توجد نتائج.' : 'No results.') + '</p>';
       return;
     }
     results.innerHTML = hits.map(item =>
-      `<a class="search-result" href="${item.url}"><span class="result-type">${item.type}</span>${item.title}</a>`
+      `<a class="search-result" href="${item.url}"><span class="result-type">${isAr ? (resultTypeAr[item.type] || item.type) : item.type}</span>${item.title}</a>`
     ).join('');
   }
 })();

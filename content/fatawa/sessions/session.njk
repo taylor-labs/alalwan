@@ -7,12 +7,14 @@ pagination:
 permalink: /fatawa/sessions/{{ session.number }}/
 ---
 
-<h1>{{ session.name }}</h1>
+<h1>{% if session.name_ar %}<span data-lang-en>{{ session.name }}</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">{{ session.name_ar }}</span>{% else %}{{ session.name }}{% endif %}</h1>
 
 <ul class="entry-list">
 {% for f in collections.fatawa %}
   {% if f.data.session == session.number %}
-    <li><a href="{{ f.url }}">{{ f.data.title }}</a></li>
+    <li><a href="{{ f.url }}">
+      {% if f.data.title_ar %}<span data-lang-en>{{ f.data.title }}</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">{{ f.data.title_ar }}</span>{% else %}{{ f.data.title }}{% endif %}
+    </a></li>
   {% endif %}
 {% endfor %}
 </ul>
