@@ -326,7 +326,7 @@ li { margin-bottom: 0.4rem; }
   border-radius: var(--radius-sm);
   color: var(--text);
   font-size: 1.075rem;
-  font-family: 'EB Garamond', Georgia, serif;
+  font-family: 'Inter', -apple-system, sans-serif;
   line-height: 1.5;
   box-shadow: var(--shadow-sm);
   transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
