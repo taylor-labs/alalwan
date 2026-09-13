@@ -9,8 +9,7 @@
   --text: #000000;
   --muted: #6b7280;
   --faint: #9ca3af;
-  --accent: #7c5c2e;
-  --accent-bg: #fdf8f0;
+  --accent: #1a1a1a;
 
   --radius: 14px;
   --radius-sm: 8px;
@@ -28,8 +27,7 @@
   --text: #f2f2f0;
   --muted: #9ca3af;
   --faint: #6b7280;
-  --accent: #c9a05a;
-  --accent-bg: #1c1710;
+  --accent: #ffffff;
 }
 
 html { scroll-behavior: smooth; }
