@@ -4,9 +4,13 @@ session: 40
 date_added: 2026-05-29
 permalink: /fatawa/condolence-visit-food-bereaved-gathering-deceased/
 sciences: [fiqh]
+language: ar-en
+title_ar: "أحكام التعزية وصنع الطعام لأهل الميت والاجتماع للعزاء"
 ---
 
-# The Rulings of the Condolence Visit, Preparing Food for the Bereaved, and Gathering at the Home of the Deceased
+<h1><span data-lang-en>The Rulings of the Condolence Visit, Preparing Food for the Bereaved, and Gathering at the Home of the Deceased</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">أحكام التعزية وصنع الطعام لأهل الميت والاجتماع للعزاء</span></h1>
+
+<div data-lang-en>
 
 Regarding the condolence visit: it has no fixed time period. It may be three days, as the jurists say, it may be less, and it may be more. The time of the condolence visit begins from when one learns of the death — and this is what is established and preserved. When a Muslim learns of the death, the condolence visit is prescribed for him — contrary to the practice of people today, who only offer condolences after the burial. This restriction has no basis. The condolence visit may be before the burial and after the burial.
 
@@ -21,5 +25,19 @@ Food preparation has become a competition — "We slaughtered four animals for t
 As for gathering at the home of the deceased for condolences: this is not prohibited at all, as long as there is no striking of cheeks, no tearing of garments, and no invoking the slogans of the people of ignorance (*jahiliyya*). The hadith of Jarir — *"We used to consider gathering at the home of the deceased to be a form of wailing (*niyaha*)."* — narrated by Ibn Majah and others, was criticised by Imam Ahmad (may Allah have mercy on him), as mentioned by Imam Abu Dawud in his *Masa'il*.
 
 And in the two *Sahihs*, the hadith of az-Zuhri from 'Urwa from Aisha — that when someone from her family died and the women gathered for that, and they eventually dispersed until no one remained except her closest family — this is evidence for gathering at the time of condolence. Further evidence is what appears in al-Bukhari in a suspended (*mu'allaq*) narration: that a man came to 'Umar, the Commander of the Faithful (may Allah be pleased with him), and said: "The women are weeping over Abu Sulayman — stop them." So 'Umar (may Allah be pleased with him) said: "There is no problem with that, as long as there is no *naqa'* — meaning throwing dust onto one's head — or *laqlaqah* — meaning raising of voices." And this chain of narration is sound. The one referred to as "Abu Sulayman" is Khalid ibn al-Walid (may Allah be pleased with him and with all of them). So 'Umar (may Allah be pleased with him) approved the women's gathering. And the hadith of Aisha further suggests that the matter was well-established among the Companions (may Allah be pleased with them) and no one disapproved of it. And the hadith of Jarir — even if taken as sound — would appear to indicate that gathering is only prohibited when it is accompanied by something from the characteristics of the people of ignorance.
+
+</div>
+
+<div data-lang-ar lang="ar" dir="rtl">
+
+## النص العربي الأصلي
+
+<div class="arabic">
+
+بالنسبة للتعزية، التعزية ليس لها وقت معين. قد تكون ثلاثة ايام كما يقول الفقهاء قد تكون اقل وقد تكون اكثر. يبتدئ وقت التعزية من العلم بالوفاة وهذا هو الثابت وهذا هو المحفوظ. علم المسلم بالوفاة شرع له التعزية خلافا لعادات الناس اليوم. لا يعزون الا بعد الدفن. وهذا التقييد لا اصل له فالعزاء يكون قبل الدفن ويكون بعد الدفن. يعزي باي لفظ كان ان شاء قال اجرك الله في مصيبتك وغفر الله لميتك وان شاء قال ان لله ما اخذ وله ما اعطى وكل شيء عنده بأجل مسمى فاصبر واحتسب ولو عزى بالفاظ اخرى المقصود مواساة المصاب. سواء اورد له حديثا او وعظا وذكره بالله المقصود تثبيته وتطمينه واخباره بما ذكر الله جل وعلا من الاجر والثواب لمثل هؤلاء ولمن صبر واحتسب. ولا يقدر ذلك بوقت. حتى لو بعد الثالث واليوم الرابع والخامس متى ما رأى انه لم يلق هذا او تأخر او شغل عنه او كان مسافرا وغير ذلك واتى وعزى فلا بأس به. لا يقدر ذلك بوقت. الفقهاء رحمهم الله حين قدروا ذلك بثلاثة ايام لم يقولوا ان في هذا الوقت تكون المصيبة حارة وبعد ذلك يبرد شأن المصيبة فلا يعزى بعد الثلاث. هذا مجرد اجتهاد. بعض العلماء عكس هذه القضية. لان بعضهم يقول بعد الساعة تذكر الهموم وبعضهم يقول لا اصلا ما يبقى هناك حزن بالعكس يكون افضل بعد الثلاثة. وعلى كل حال انه يعزى قبل الوفاة وبعد الوفاة ولا يقدر ذلك سواء كان بعد الثالث او الرابع او الخامس. اما بالنسبة لصنع الطعام لاهل الميت فقد قال النبي صلى الله عليه وسلم اصنعوا لآل جعفر طعاما فقد اتاهم ما يشغلهم. وهذا حديث جيد. يستدل بمثله وظاهر الخبر انه يصنع لاهل الميت طعام لانه اتاهم ما يشغلهم. بمعنى اذا لم ينشغلوا بأن يكون في البيت من يخدم ممن لم يصب بمصيبة فلا حاجة الى صنع الطعام لهم. لان الناس اليوم اتخذت صنع الطعام عادة ما اتخذوه لانهم قد شغلوا بمعنى ان بعض البيوت قد امتلأت بالخادمات. وربما لا يدرون ان ميتا قد مات ومع ذلك يصنع لهم شيء. انتظارا لاطعمة الاخرين وهذا غلط لا اصل له. من يخدمكم وانتم في مصيبتكم لا يشغلكم شيء فمن يخدمكم لا داعي له، اذا صار هذا مقصودا اصبحت عادة. اهم شيء ان هذا يصنع الطعام ويحاسب من لم يفعل. ما عرف قدرنا ولا مكانتنا حين مات، ذبحنا اربع ذبائح. والله انا لو ثمان. اصبحت منافسة. وهذا غلط محض. لان حديث آل جعفر معناه اذا اتاكم ما يشغلكم فأطعموا، فان لم يشغلكم شيء لا داعي. واذا امكن اليوم تقديم الطعام له ولا يقدم في المطاعم اليوم؟ كثيرة بامكانك تشتري طعاما دون ان تستجيب لدعوات اصبحت الاطعمة نوع مكاثرة. وايضا الطعام لا يقدم بثلاثة ايام كواقع الناس اليوم. هذا لا اصل له. انما بقدر ما يذهب عنه الشغل. لانه قال فقد اتاهم ما يشغلهم ربما يشغلهم وقت الذي سيدفن فيه لكن من الغد ما الذي يشغله؟ لا داعي لمثل هذا. الانسان ينتبه لهذه القضية ولا يسقط القضية باثرها لان بعض الناس يفهم النص على غير وجهه. اما الاجتماع للعزاء فهذا ليس فيه شيء ما لم يكن فيه ضرب خدود ولا شق جيوب ولا دعاء بدعاوى اهل الجاهلية. واما حديث جرير كنا نعد الاجتماع الى اهل الميت من النياحة، رواه ابن ماجه وغيره. فهذا قد انكره الامام احمد رحمه الله فيما ذكره عنه الامام ابو داود في مسائله. وقد جاء في الصحيحين عن الزهري عن عروة عن عائشة انه اذا مات الميت من اهلها واجتمع لذلك النساء وتفرقن ولم يبق الا خاصتها واهل بيتها الحديث. فهذا دليل على الاجتماع وقت العزاء. ومما يدل على هذا ايضا ما جاء في البخاري معلقا ان رجلا اتى الى عمر امير المؤمنين رضي الله عنه فقال ان النساء يبكين على ابي سليمان فانهاهن. فقال عمر رضي الله عنه لا بأس بذلك. ما لم يكن نقع اي حثو للتراب على الرأس او لقلقة اي رفع اصوات وهذا اسناده صحيح. والمقصود بابي سليمان هو خالد بن الوليد رضي الله عنه وعن الجميع. فهذا عمر رضي الله عنه اقر النساء على الاجتماع. وقبله حديث عائشة هذا يشعر بان الامر كان معروفا بين الصحابة رضي الله عنهم. ولم ينكر ذلك منكر. وايضا الحديث المتقدم اذا قلنا انه معلول ولو صح لكان يحمل على ان الاجتماع اذا صحبه شيء من خصال اهل الجاهلية.
+
+</div>
+
+</div>
 
 ## Source: The 40th Open Session of Shaykh Sulayman al-'Alwan

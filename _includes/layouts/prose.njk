@@ -1,8 +1,11 @@
 ---
 layout: layouts/base.njk
 ---
-<a href="/fatawa/" class="prose-back">&#8592; Back to Fatawa</a>
-{% if date_added %}<p class="entry-meta">Added {{ date_added | readableDate }}</p>{% endif %}
+<a href="/fatawa/" class="prose-back">
+  <span data-lang-en>&#8592; Back to Fatawa</span>
+  <span data-lang-ar lang="ar" dir="rtl" class="ar-label prose-back-ar"><span>&#8594;</span><span>العودة إلى الفتاوى</span></span>
+</a>
+{% if date_added %}<p class="entry-meta"><span data-lang-en>Added {{ date_added | readableDate }}</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">أُضيف بتاريخ {{ date_added | readableDate }}</span></p>{% endif %}
 <div class="prose">
   {{ content | safe }}
 </div>

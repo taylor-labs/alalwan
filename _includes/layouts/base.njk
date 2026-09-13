@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if title %}{{ title }} | Shaykh Sulayman al-Alwan{% else %}Shaykh Sulayman al-Alwan{% endif %}</title>
+  <title data-title-en="{% if title %}{{ title }} | Shaykh Sulayman al-Alwan{% else %}Shaykh Sulayman al-Alwan{% endif %}" data-title-ar="{% if title_ar %}{{ title_ar }} | الشيخ سليمان بن ناصر العلوان{% endif %}">{% if title %}{{ title }} | Shaykh Sulayman al-Alwan{% else %}Shaykh Sulayman al-Alwan{% endif %}</title>
   <meta name="description" content="{{ description or 'A curated archive of scholarly works, fatawa, and translations from Shaykh Sulayman al-Alwan.' }}">
   <script>
     (function() {
@@ -11,6 +11,13 @@
       var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       if (saved === 'dark' || (!saved && prefersDark)) {
         document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+    (function() {
+      if (localStorage.getItem('alwan_lang') === 'ar') {
+        document.documentElement.setAttribute('data-lang', 'ar');
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.setAttribute('lang', 'ar');
       }
     })();
   </script>
@@ -26,14 +33,15 @@
     <div class="header-left">
       <a href="/"><img src="/static/img/banner.png" alt="سليمان ناصر العلوان" class="site-banner"></a>
       <nav id="main-nav">
-        <a href="/">Home</a>
-        <a href="/biography/">Biography</a>
-        <a href="/fatawa/">Fatawa</a>
-        <a href="/sciences/">Sciences</a>
-        <a href="/about/">About</a>
+        <a href="/"><span data-lang-en>Home</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">الرئيسية</span></a>
+        <a href="/biography/"><span data-lang-en>Biography</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">السيرة الذاتية</span></a>
+        <a href="/fatawa/"><span data-lang-en>Fatawa</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">الفتاوى</span></a>
+        <a href="/sciences/"><span data-lang-en>Sciences</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">العلوم</span></a>
+        <a href="/about/"><span data-lang-en>About</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">حول</span></a>
       </nav>
     </div>
     <div class="header-right">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">AR</button>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"></button>
       <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="2" y1="4" x2="14" y2="4"/><line x1="2" y1="8" x2="14" y2="8"/><line x1="2" y1="12" x2="14" y2="12"/></svg>
@@ -41,11 +49,11 @@
     </div>
   </header>
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <a href="/">Home</a>
-    <a href="/biography/">Biography</a>
-    <a href="/fatawa/">Fatawa</a>
-    <a href="/sciences/">Sciences</a>
-    <a href="/about/">About</a>
+    <a href="/"><span data-lang-en>Home</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">الرئيسية</span></a>
+    <a href="/biography/"><span data-lang-en>Biography</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">السيرة الذاتية</span></a>
+    <a href="/fatawa/"><span data-lang-en>Fatawa</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">الفتاوى</span></a>
+    <a href="/sciences/"><span data-lang-en>Sciences</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">العلوم</span></a>
+    <a href="/about/"><span data-lang-en>About</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">حول</span></a>
   </div>
 
   <main>
@@ -56,7 +64,8 @@
     <div class="footer-inner">
       <span class="footer-name">Shaykh Sulayman al-Alwan</span>
       <span class="footer-sep">·</span>
-      <span>A scholarly archive in English</span>
+      <span data-lang-en>All works in English &amp; Arabic</span>
+      <span data-lang-ar lang="ar" dir="rtl" class="ar-label">جميع الأعمال بالإنجليزية والعربية</span>
     </div>
   </footer>
 
@@ -98,6 +107,51 @@
     });
 
     applyThemeIcon();
+
+    // Language toggle
+    var langToggleBtn = document.getElementById('lang-toggle');
+
+    function applyLangLabel() {
+      var isAr = document.documentElement.getAttribute('data-lang') === 'ar';
+      langToggleBtn.textContent = isAr ? 'EN' : 'AR';
+    }
+
+    function updatePlaceholders() {
+      var isAr = document.documentElement.getAttribute('data-lang') === 'ar';
+      document.querySelectorAll('[data-placeholder-en]').forEach(function(el) {
+        el.setAttribute('placeholder', isAr ? el.getAttribute('data-placeholder-ar') : el.getAttribute('data-placeholder-en'));
+      });
+    }
+
+    function updateTitle() {
+      var isAr = document.documentElement.getAttribute('data-lang') === 'ar';
+      var titleEl = document.querySelector('title');
+      var titleAr = titleEl.getAttribute('data-title-ar');
+      var titleEn = titleEl.getAttribute('data-title-en');
+      document.title = (isAr && titleAr) ? titleAr : titleEn;
+    }
+
+    langToggleBtn.addEventListener('click', function() {
+      var isAr = document.documentElement.getAttribute('data-lang') === 'ar';
+      var next = isAr ? 'en' : 'ar';
+      if (next === 'ar') {
+        document.documentElement.setAttribute('data-lang', 'ar');
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.setAttribute('lang', 'ar');
+      } else {
+        document.documentElement.removeAttribute('data-lang');
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.documentElement.setAttribute('lang', 'en');
+      }
+      localStorage.setItem('alwan_lang', next);
+      applyLangLabel();
+      updatePlaceholders();
+      updateTitle();
+    });
+
+    applyLangLabel();
+    updatePlaceholders();
+    updateTitle();
 
     // Mobile menu toggle
     var menuBtn = document.getElementById('menu-toggle');

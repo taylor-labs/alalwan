@@ -2,11 +2,11 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #f5f5f4;
+  --bg: #ffffff;
   --surface: #ffffff;
-  --surface2: #f0f0ef;
+  --surface2: #f5f5f4;
   --border: rgba(0,0,0,0.09);
-  --text: #111111;
+  --text: #000000;
   --muted: #6b7280;
   --faint: #9ca3af;
   --accent: #7c5c2e;
@@ -49,7 +49,7 @@ body {
 #progress-bar {
   position: fixed;
   top: 0;
-  left: 0;
+  inset-inline-start: 0;
   height: 2px;
   width: 0%;
   background: var(--accent);
@@ -62,7 +62,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(245, 245, 244, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
@@ -141,6 +141,51 @@ nav a.active {
 }
 
 .theme-toggle svg { width: 15px; height: 15px; }
+
+/* === Language Toggle === */
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  height: 34px;
+  min-width: 34px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--muted);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: color 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+
+.lang-toggle:hover {
+  color: var(--text);
+  background: var(--surface2);
+}
+
+/* Bilingual content: hide Arabic by default, show once html[data-lang="ar"] is set */
+[data-lang-ar] { display: none; }
+html[data-lang="ar"] [data-lang-ar] { display: revert; }
+html[data-lang="ar"] [data-lang-en] { display: none; }
+
+.ar-label {
+  font-family: "Scheherazade New", serif;
+  direction: rtl;
+  unicode-bidi: isolate;
+  text-align: right;
+}
+
+/* Safety net: any element explicitly marked RTL renders RTL, regardless of ancestry */
+[dir="rtl"] {
+  direction: rtl;
+  unicode-bidi: isolate;
+  text-align: right;
+}
 
 /* === Layout === */
 main, footer {
@@ -238,11 +283,11 @@ hr {
 /* === Lists === */
 ul {
   list-style: none;
-  padding-left: 0;
+  padding-inline-start: 0;
 }
 
 ul li {
-  padding-left: 1.25rem;
+  padding-inline-start: 1.25rem;
   text-indent: -1.25rem;
 }
 
@@ -252,7 +297,7 @@ ul li::before {
 }
 
 ol {
-  padding-left: 1.5rem;
+  padding-inline-start: 1.5rem;
 }
 
 li { margin-bottom: 0.4rem; }
@@ -266,7 +311,7 @@ li { margin-bottom: 0.4rem; }
 }
 
 .entry-list li {
-  padding-left: 0;
+  padding-inline-start: 0;
   text-indent: 0;
   margin-bottom: 0;
 }
@@ -398,7 +443,7 @@ p.search-result {
   color: var(--faint);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin-right: 0.6rem;
+  margin-inline-end: 0.6rem;
   background: var(--surface2);
   padding: 2px 7px;
   border-radius: 100px;
@@ -409,6 +454,7 @@ p.search-result {
   font-family: "Scheherazade New", serif;
   direction: rtl;
   unicode-bidi: isolate;
+  text-align: right;
   font-size: 1.3em;
   line-height: 2.1;
   color: var(--text);
@@ -445,6 +491,12 @@ p.search-result {
   color: var(--faint);
   text-decoration: none;
   transition: color 0.15s;
+}
+
+.prose-back-ar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
 }
 
 .prose-back:hover {

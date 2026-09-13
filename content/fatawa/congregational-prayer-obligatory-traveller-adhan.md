@@ -4,9 +4,13 @@ session: 40
 date_added: 2026-05-04
 permalink: /fatawa/congregational-prayer-obligatory-traveller-adhan/
 sciences: [fiqh]
+language: ar-en
+title_ar: "وجوب صلاة الجماعة على المسافر إذا سمع الأذان"
 ---
 
-# Is Congregational Prayer in a Mosque Obligatory for a Traveller Who Hears the Adhan?
+<h1><span data-lang-en>Is Congregational Prayer in a Mosque Obligatory for a Traveller Who Hears the Adhan?</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">وجوب صلاة الجماعة على المسافر إذا سمع الأذان</span></h1>
+
+<div data-lang-en>
 
 The brother says: if the traveller is on the road or has stopped at a house and hears the call to prayer, is congregational prayer in the masjid obligatory for him or not? This requires detail.
 
@@ -21,5 +25,19 @@ It is evidence that masajid are not obligatory in travel, and that the congregat
 <span class="questioner"><strong>Questioner:</strong> (asks question regarding the hadith 'there is no Friday prayer and no congregational prayer upon a traveller')</span>
 
 This hadith is weak. It is not sound from the Prophet ﷺ. What is sound in this regard is the hadith of Tariq ibn Shihab: "The Friday prayer is obligatory except for four..." — the hadith.
+
+</div>
+
+<div data-lang-ar lang="ar" dir="rtl">
+
+## النص العربي الأصلي
+
+<div class="arabic">
+
+الاخ يقول المسافر اذا كان سائرا في الطريق او كان نازلا في البيت وسمع النداء هل تجب عليه الجماعة في المسجد ام لا؟ هذا فيه تفصيل. ان كان وحده فالجماعة عليه واجبة واذا ما تيسر له جماعة في البيت وجب عليه الذهاب الى المسجد من باب ما لا يتم الواجب الا به فهو واجب. وعموم الادلة الدالة على وجوب صلاة الجماعة حضرا وسفرا فمن ذلك قوله جل وعلا واذا كنت فيهم فاقمت لهم الصلاة فلتقم طائفة منهم معك فالله امر باقامة الجماعة في الخوف وكانت صلاة الخوف في السفر. واذا وجبت الجماعة على الخائف في السفر فلتكن واجبة على الآمن من باب اولى وهذه الاية من اقوى الادلة على وجوب صلاة الجماعة حضرا وسفرا. واما اذا كان هذا المسافر مع مجموعة فالمساجد لا تجب عليهم. وانما تجب عليهم الجماعة ويستدل لهذا بحديث يزيد بن الاسود عند الخمسة ان النبي صلى الله عليه وسلم صلى الفجر في مسجد الخيف فرأى برجلين لم يصليا معه في مؤخرة القوم. فجيء بهما ترعد فرائصهما. فلما سلم من الصلاة قال ما منعكما ان تصليا معنا؟ فقالا يا رسول الله صلينا في رحالنا فقال النبي صلى الله عليه وسلم لا تفعلا اذا اتيتما جماعة وهم يصلون فصليا معهم فان لكما نافلة وهذا حديث صحيح وهو دليل على عدم وجوب المساجد في السفر. وان الجماعة هي الواجبة ولكن لا يظهر الانسان من الناس ويظهر كأنه فعل منكرا وانما يجلس في بيته ولكن اتيان المسجد لا يجب عليه ما دام يصلي جماعة في البيت. ليس على مسافر جمعة ولا جماعة هذا الحديث ضعيف لا يصح عن النبي صلى الله عليه وسلم. انما الصحيح في ذلك حديث طارق ابن شهاب. الجمعة واجبة الا على اربعة. الحديث.
+
+</div>
+
+</div>
 
 ## Source: The 40th Open Session of Shaykh Sulayman al-'Alwan
