@@ -5,18 +5,18 @@ eleventyExcludeFromCollections: true
 {%- set comma = joiner() -%}
 [
 {%- for item in collections.scholars -%}
-{{ comma() }}{"title":{{ item.data.title | dump | safe }},"url":{{ item.url | dump | safe }},"type":"scholar"}
+{{ comma() }}{"title":{{ item.data.title | dump | safe }},"title_ar":{{ (item.data.title_ar or "") | dump | safe }},"url":{{ item.url | dump | safe }},"type":"scholar"}
 {%- endfor -%}
 {%- for item in collections.fatawa -%}
-{{ comma() }}{"title":{{ item.data.title | dump | safe }},"url":{{ item.url | dump | safe }},"type":"fatwa"}
+{{ comma() }}{"title":{{ item.data.title | dump | safe }},"title_ar":{{ (item.data.title_ar or "") | dump | safe }},"url":{{ item.url | dump | safe }},"type":"fatwa"}
 {%- endfor -%}
 {%- for item in collections.poetry -%}
-{{ comma() }}{"title":{{ item.data.title | dump | safe }},"url":{{ item.url | dump | safe }},"type":"poem"}
+{{ comma() }}{"title":{{ item.data.title | dump | safe }},"title_ar":{{ (item.data.title_ar or "") | dump | safe }},"url":{{ item.url | dump | safe }},"type":"poem"}
 {%- endfor -%}
 {%- for item in collections.books -%}
-{{ comma() }}{"title":{{ item.data.title | dump | safe }},"url":{{ item.url | dump | safe }},"type":"book"}
+{{ comma() }}{"title":{{ item.data.title | dump | safe }},"title_ar":{{ (item.data.title_ar or "") | dump | safe }},"url":{{ item.url | dump | safe }},"type":"book"}
 {%- endfor -%}
 {%- for item in collections.poets -%}
-{{ comma() }}{"title":{{ item.data.title | dump | safe }},"url":{{ item.url | dump | safe }},"type":"poet"}
+{{ comma() }}{"title":{{ item.data.title | dump | safe }},"title_ar":{{ (item.data.title_ar or "") | dump | safe }},"url":{{ item.url | dump | safe }},"type":"poet"}
 {%- endfor -%}
 ]

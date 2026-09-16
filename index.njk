@@ -108,14 +108,18 @@ title: Shaykh Sulayman al-Alwan
 
   function render(q) {
     var isAr = document.documentElement.getAttribute('data-lang') === 'ar';
-    const hits = index.filter(item => item.title.toLowerCase().includes(q)).slice(0, 10);
+    const hits = index.filter(item =>
+      item.title.toLowerCase().includes(q) || (item.title_ar && item.title_ar.includes(q))
+    ).slice(0, 10);
     if (!hits.length) {
       results.innerHTML = '<p class="search-result">' + (isAr ? 'لا توجد نتائج.' : 'No results.') + '</p>';
       return;
     }
-    results.innerHTML = hits.map(item =>
-      `<a class="search-result" href="${item.url}"><span class="result-type">${isAr ? (resultTypeAr[item.type] || item.type) : item.type}</span>${item.title}</a>`
-    ).join('');
+    results.innerHTML = hits.map(item => {
+      var label = isAr && item.title_ar ? item.title_ar : item.title;
+      var dir = isAr && item.title_ar ? ' dir="rtl"' : '';
+      return `<a class="search-result"${dir} href="${item.url}"><span class="result-type">${isAr ? (resultTypeAr[item.type] || item.type) : item.type}</span>${label}</a>`;
+    }).join('');
   }
 })();
 </script>
