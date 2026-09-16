@@ -44,7 +44,9 @@
       <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">AR</button>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"></button>
       <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="2" y1="4" x2="14" y2="4"/><line x1="2" y1="8" x2="14" y2="8"/><line x1="2" y1="12" x2="14" y2="12"/></svg>
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
+        <span class="menu-toggle-bar"></span>
       </button>
     </div>
   </header>
@@ -158,12 +160,16 @@
     var mobileMenu = document.getElementById('mobile-menu');
     menuBtn.addEventListener('click', function() {
       var open = mobileMenu.classList.toggle('open');
+      menuBtn.classList.toggle('open', open);
       menuBtn.setAttribute('aria-expanded', open);
+      mobileMenu.setAttribute('aria-hidden', !open);
     });
     document.addEventListener('click', function(e) {
       if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
         mobileMenu.classList.remove('open');
+        menuBtn.classList.remove('open');
         menuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
       }
     });
 

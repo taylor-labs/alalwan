@@ -5,7 +5,7 @@ title: Shaykh Sulayman al-Alwan
 
 <div class="hero">
   <h1>
-    <span data-lang-en>Shaykh Sulayman<br>ibn Nasir al-Alwan</span>
+    <span data-lang-en id="hero-typewriter" data-typewriter-text="Shaykh Sulayman&#10;ibn Nasir al-Alwan"></span>
     <span data-lang-ar lang="ar" dir="rtl" class="ar-label">الشيخ سليمان بن ناصر العلوان</span>
   </h1>
   <p class="hero-sub">
@@ -53,6 +53,38 @@ title: Shaykh Sulayman al-Alwan
 </div>
 
 <script>
+(function () {
+  var el = document.getElementById('hero-typewriter');
+  var fullText = el.getAttribute('data-typewriter-text');
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var speed = 38;
+  var startDelay = 300;
+
+  function render(slice, done) {
+    el.textContent = slice;
+    if (!done) {
+      var cursor = document.createElement('span');
+      cursor.className = 'typewriter-cursor';
+      el.appendChild(cursor);
+    }
+  }
+
+  if (reduceMotion) {
+    render(fullText, true);
+  } else {
+    render('', false);
+    setTimeout(function () {
+      var i = 0;
+      var timer = setInterval(function () {
+        i++;
+        var done = i >= fullText.length;
+        render(fullText.slice(0, i), done);
+        if (done) clearInterval(timer);
+      }, speed);
+    }, startDelay);
+  }
+})();
+
 (function () {
   const input = document.getElementById('search-input');
   const results = document.getElementById('search-results');
