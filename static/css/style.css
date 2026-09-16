@@ -394,13 +394,18 @@ li { margin-bottom: 0.4rem; }
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--text);
-  font-family: 'Scheherazade New', 'Inter', -apple-system, sans-serif;
-  font-size: 1.1rem;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.95rem;
   padding: 0.65rem 1rem;
   outline: none;
   transition: border-color 0.2s, background 0.2s;
   -webkit-appearance: none;
   appearance: none;
+}
+
+html[data-lang="ar"] #search-input {
+  font-family: 'Scheherazade New', 'Inter', -apple-system, sans-serif;
+  font-size: 1.1rem;
 }
 
 #search-input:focus {
@@ -425,8 +430,14 @@ a.search-result {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--text);
+  font-family: 'Inter', -apple-system, sans-serif;
   font-size: 1rem;
   transition: border-color 0.15s;
+}
+
+html[data-lang="ar"] a.search-result {
+  font-family: 'Scheherazade New', 'Inter', -apple-system, sans-serif;
+  font-size: 1.15rem;
 }
 
 a.search-result:hover {
