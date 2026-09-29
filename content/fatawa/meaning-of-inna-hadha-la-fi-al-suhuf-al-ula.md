@@ -12,9 +12,9 @@ title_ar: "معنى قوله تعالى: إن هذا لفي الصحف الأو�
 
 <div data-lang-en>
 
-<span class="questioner"><strong>Questioner:</strong> What does "this" refer to in His statement, exalted is He, "Indeed, this is in the former scriptures"?</span>
+<span class="questioner"><strong>Questioner:</strong> (audio unclear)</span>
 
-The demonstrative in His statement, exalted is He, "Indeed, this is in the former scriptures, the scriptures of Abraham and Moses" — "this" is a demonstrative pronoun referring to what was mentioned before it: that this is found written in the former scriptures. Then the former scriptures are explained — what are they? The scriptures of Abraham and Moses. For their scriptures consisted of admonitions, details, and wisdom; the former scriptures were not of the same standing as the Qur'an.
+The demonstrative in His statement, exalted is He, "Indeed, this is in the former scriptures, the scriptures of Abraham and Moses" — "this" is a demonstrative pronoun referring to what was mentioned before it: that this is found written in the former scriptures. Then the former scriptures are explained — what are they? The scriptures of Abraham and Moses. For their scriptures consisted of admonitions, details (audio unclear) and wisdom; the former scriptures were not of the same standing as the Qur'an.
 
 </div>
 
@@ -24,9 +24,9 @@ The demonstrative in His statement, exalted is He, "Indeed, this is in the forme
 
 <div class="arabic">
 
-<span class="questioner"><strong>السائل:</strong> إلى أيّ شيء تعود الإشارة في قوله تعالى: إن هذا لفي الصحف الأولى؟</span>
+<span class="questioner"><strong>السائل:</strong> (غير واضح في التسجيل)</span>
 
-الإشارة في قوله تعالى: إن هذا لفي الصحف الأولى صحف إبراهيم وموسى؛ "هذا" اسم إشارة للمذكور قبله، وأن هذا موجود مكتوب في الصحف الأولى، ثم فُسّرت الصحف الأولى: ما هي؟ صحف إبراهيم وموسى؛ لأن صحفهم كانت مواعظ وتفاصيل وحِكَمًا، ولم تكن الصحف الأولى بمنزلة القرآن.
+الإشارة في قوله تعالى: إن هذا لفي الصحف الأولى صحف إبراهيم وموسى؛ "هذا" اسم إشارة للمذكور قبله، وأن هذا موجود مكتوب في الصحف الأولى، ثم فُسّرت الصحف الأولى: ما هي؟ صحف إبراهيم وموسى؛ لأن صحفهم كانت مواعظ وتفاصيل (غير واضح في التسجيل) وحِكَمًا، ولم تكن الصحف الأولى بمنزلة القرآن.
 
 </div>
 
