@@ -1,0 +1,75 @@
+---
+title: "Why the Verse Ends with \"the Arrogant\": Arrogance, Refusal, and Disbelief Without Denial"
+session: 15
+date_added: 2026-09-30
+permalink: /fatawa/why-the-verse-ends-with-the-arrogant/
+sciences: [aqeedah]
+language: ar-en
+title_ar: "لماذا خُتمت الآية بالمتكبرين؟ الكبر والامتناع والكفر بغير جحود"
+---
+
+<h1><span data-lang-en>Why the Verse Ends with "the Arrogant": Arrogance, Refusal, and Disbelief Without Denial</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">لماذا خُتمت الآية بالمتكبرين؟ الكبر والامتناع والكفر بغير جحود</span></h1>
+
+<div data-lang-en>
+
+<span class="questioner"><strong>Questioner:</strong> His statement, exalted is He, "And on the Day of Resurrection you will see those who lied about Allah…" (audio unclear) the verse.</span>
+
+All praise is due to Allah, Lord of the worlds, and may abundant peace and blessings be upon our Prophet Muhammad, his family, and his Companions. To proceed: the brother asks about the reason Allah, majestic and exalted is He, ended His statement, exalted is He, "And on the Day of Resurrection you will see those who lied about Allah with their faces blackened. Is there not in Hell a residence for the arrogant?" Why was it ended with "the arrogant"? Why was it not ended with "the disbelievers"?
+
+First, we must know that arrogance (takabbur) is among the causes of the disbelief of many of the children of Adam, and that what expelled Iblis from Paradise — his refusal to prostrate to Adam — was arrogance (kibr), as Allah, majestic and exalted is He, said: "Except Iblis; he refused and was arrogant and became of the disbelievers." Arrogance has levels: some of it negates the foundation of faith, and some of it negates its obligatory completeness. Everyone who refuses to commit to the laws of Islam and the rulings of the religion, and declines to submit to the judgment of Allah and the judgment of His Messenger ﷺ, is arrogant. For this reason, those who do not commit to the rulings of Allah are counted as arrogant, and those who are called to the rulings of Allah and refuse are counted as arrogant. This differs from mere abandonment: mere abandonment is one thing, and refusal and non-commitment are something else — and this is greater and more serious.
+
+It came in Sahih Muslim that the Prophet ﷺ said, "When the son of Adam comes upon the [verse of] prostration and prostrates, Iblis sits weeping and says, 'Woe to me! The son of Adam was commanded to prostrate and he prostrated, so Paradise is his; and I was commanded to prostrate and I refused, so the Fire is mine.'" This is evidence that the cause of Iblis's disbelief was refusal — it was refusal — and that the motive of the refusal was arrogance. It was not out of denial (juhud); it was not out of denial — contrary to the early Jahmiyyah and the "female Jahmiyyah," who restrict the nullifiers of Islam to denial, to deeming [the forbidden] lawful (istihlal), to belying, or to belief. The imams of Islam — such as Waki', Ahmad ibn Hanbal, Sufyan, and other imams — refuted the Jahmiyyah, who restrict the nullifiers to belief, denial, and deeming lawful, by the disbelief of Iblis, because it was not out of denial; rather, it was arrogance, refusal, and disobedience to the command of Allah, majestic and exalted is He.
+
+This arrogance may be greater than mere disbelief (audio unclear) mere disbelief which is not joined to anything else — or [than] someone committing disbelief merely for [the sake of] worldly gain, as if (audio unclear), meaning he says that Allah is the third of three even though he does not believe it. This one is a disbeliever, because he committed explicit disbelief for the sake of worldly gain. But the first is greater than him, because it is the result of arrogance and haughtiness.
+
+That is why Allah, majestic and exalted is He, said, "And on the Day of Resurrection you will see those who lied about Allah with their faces blackened." Those who lied about Allah are those who claim that Allah has a son, or that Allah is the third of three, and those who make lawful what is unanimously agreed to be forbidden, and forbid what is unanimously agreed to be lawful. These are liars against Allah, and these are counted as arrogant.
+
+For this reason Allah, majestic and exalted is He, described the disbelievers with turning away (i'rad). He said, exalted is He, "But those who disbelieve are turning away from that of which they are warned," and He said, exalted is He, "And who is more unjust than one who is reminded of the verses of his Lord and then turns away from them?" Turning away is of two kinds. [The first is] turning away from hearing: that one refuses to listen to the truth, so he does not give ear to it or pay it any attention whatsoever. [The second is] turning away from acceptance: where he (audio unclear) hears, but does not accept — just as the disbelievers of Quraysh used to hear from the Prophet ﷺ, and the Jews used to hear from the Prophet ﷺ, and he would remind them (audio unclear), and they would say, "We hear" — meaning we hear with our ears — in the sense that they do not accept. Like the hypocrites, who say, "We hear and we disobey," and "Hear, (audio unclear) heard," and "Ra'ina," twisting their tongues. These people hear but do not respond; they are turning away in the sense of [not] responding, and they are the worst of creatures in the sight of Allah, as He, exalted is He, said: "Indeed, the worst of living creatures in the sight of Allah are the deaf and dumb who do not reason. Had Allah known any good in them, He would have made them hear; and had He made them hear, they would have turned away, while they were refusing." That is why Allah, majestic and exalted is He, said after that: "O mankind, respond to Allah and to the Messenger when he calls you to that which gives you life" — that is, to that in which lies your life, your honour, and your happiness in this world and the Hereafter. There is no happiness in this world or the Hereafter except by responding to the command of Allah and the command of His Messenger ﷺ.
+
+Ahl al-Sunnah wa al-Jama'ah have agreed (audio unclear) among the nullifiers of Islam — meaning the practical ones, because this is what the Jahmiyyah disputed — that it is not a condition for [takfir] in them that he deem it lawful. So if he prostrated to a grave, or prostrated to an idol, or replaced the Shari'ah of Allah (audio unclear) man-made laws, or believed that [man-made] laws are better guidance than the divine Shari'ah, or acted according to that even if he did not believe it; or supported the disbelievers against the Muslims, even if he claimed that he does not love the disbelievers — even if he curses them and reviles them; or said that Allah is the third of three and said, "I do not believe it"; or (audio unclear) Allah and His Messenger and said, "I do not believe it" — this is not accepted from these people.
+
+Ahl al-Sunnah have reached consensus that belief is not a condition in this, because belief is an independent [form of] disbelief — belief is an independent [form of] disbelief — meaning that if a servant believed in his heart that Allah is the third of three, he would disbelieve even if he did not speak. So if the disbelief of belief (audio unclear), then there would be no meaning to action at all: a man replaces the religion of Allah, or aids the disbelievers (audio unclear) — [while one who] (audio unclear) in the Rawdah in the mosque and loved the religion of the disbelievers became one of the pure hypocrites whose apostasy is agreed upon. So action would then have had no (audio unclear) — even though Allah, majestic and exalted is He, said: "And they had certainly spoken the word of disbelief and disbelieved after their Islam." So the basis of disbelief, as the Qur'an explicitly states, is the saying, not the belief.
+
+And those who said, "We have not seen the like of these reciters of ours — more eager (audio unclear), more lying of tongue, or more cowardly in battle" — Allah revealed Qur'an concerning them, declaring their apostasy, even though they had gone out with the Prophet as mujahidin, fighting in the path of Allah. They said this upon their return from the expedition of Tabuk, and they claimed that they said it by way of play and joking, not intending its reality. Allah revealed the Qur'an concerning their apostasy: "Say: Was it Allah and His verses and His Messenger that you were mocking? Make no excuse; you have disbelieved after your belief." Allah affirmed faith for them by the text of the Qur'an — Allah affirmed faith for them by the text of the Qur'an — and [affirmed] that they disbelieved because of a word they said by way of joking and by way of play. Neither Allah nor His Messenger mentioned the condition of belief, nor the condition of deeming lawful, nor the condition of denial, because these are independent nullifiers — because these are independent nullifiers.
+
+What Ahl al-Sunnah wa al-Jama'ah also agree upon (audio unclear) is that disbelief is every saying, action, or belief that negates the foundation of faith. Belief is one thing, action is one thing, and denial is something else; these may come together and they may come apart.
+
+So Allah, majestic and exalted is He, said, "Is there not in Hell a residence for the arrogant?" — that is, these who are too arrogant [to accept] the law of Allah. Everyone who is called to the law of Allah and refuses is counted as arrogant, and this is more severe in punishment than those who (audio unclear).
+
+</div>
+
+<div data-lang-ar lang="ar" dir="rtl">
+
+## النص العربي الأصلي
+
+<div class="arabic">
+
+<span class="questioner"><strong>السائل:</strong> قوله تعالى: ويوم القيامة ترى الذين كذبوا على الله (غير واضح في التسجيل) الآية.</span>
+
+الحمد لله رب العالمين، والصلاة والسلام على نبينا محمد وعلى آله وصحبه وسلم تسليمًا كثيرًا، أما بعد: فإن الأخ يسأل عن سبب ختم الله جل وعلا قوله تعالى: ويوم القيامة ترى الذين كذبوا على الله وجوههم مسودة أليس في جهنم مثوى للمتكبرين؛ لماذا خُتمت بالمتكبرين؟ ما خُتمت بالكافرين؟
+
+أولًا يجب أن نعرف أن التكبر هو من أسباب كفر كثير من بني آدم، وأن الذي أخرج إبليس من الجنة وامتناعه عن السجود لآدم كان هو الكبر، كما قال الله جل وعلا: إلا إبليس أبى واستكبر وكان من الكافرين. والكبر مراتب: منه ما يناقض أصل الإيمان، ومنه ما يناقض كماله الواجب. كل من امتنع عن التزام شرائع الإسلام وأحكام الدين، وأبى أن ينقاد لحكم الله ولحكم رسوله صلى الله عليه وسلم، فهو مستكبر؛ ولذلك الذين لا يلتزمون بأحكام الله يُعدّون مستكبرين، والذين يُدعون إلى أحكام الله فيمتنعون يُعدّون مستكبرين. وهذا يختلف عن الترك المجرد؛ فالترك المجرد شيء، والامتناع وعدم الالتزام شيء آخر، وهذا أكبر وأعظم.
+
+وجاء في صحيح مسلم أن النبي صلى الله عليه وسلم قال: إذا مرّ ابن آدم بالسجدة فسجد جلس إبليس يبكي، فقال: يا ويلي، أُمر ابن آدم بالسجود فسجد فله الجنة، وأُمرت بالسجود فأبيت فلي النار. فهذا دليل أن سبب كفر إبليس هو الامتناع، هو الامتناع، وأن دوافع الامتناع هي الاستكبار، ولم يكن عن جحد، ولم يكن عن جحد، خلافًا للجهمية الأولى والجهمية الإناث، الذين يقيّدون نواقض الإسلام بالجحود والاستحلال أو التكذيب أو الاعتقاد. وقد ردّ أئمة الإسلام كوكيع وأحمد بن حنبل وسفيان وآخرين من الأئمة على الجهمية الذين يقيّدون النواقض بالاعتقاد والجحود والاستحلال بكفر إبليس؛ لأنه لم يكن عن جحد، وإنما كان استكبارًا وإباءً وعصيانًا لأمر الله جل وعلا.
+
+وهذا الكبر قد يكون أعظم من الكفر المجرد (غير واضح في التسجيل) الكفر المجرد الذي لم يقترن به شيء، أو كأن يفعل الكفر لمجرد دنيا، كما لو (غير واضح في التسجيل)، يعني يقول بأن الله ثالث ثلاثة وإن كان ما يعتقد؛ هذا كافر؛ لأنه أتى بالكفر الصريح لأجل الدنيا. فالأول أعظم منه؛ لأنه نتيجة كبر واستعلاء.
+
+فلذلك قال الله جل وعلا: ويوم القيامة ترى الذين كذبوا على الله وجوههم مسودة. الذين كذبوا على الله هم الذين يزعمون أن لله ولدًا، أو بأن الله ثالث ثلاثة، والذين يحلّلون الحرام المجمع عليه، ويحرّمون الحلال المجمع عليه؛ هؤلاء كذبة على الله، وهؤلاء يُعدّون مستكبرين.
+
+ولذلك الله جل وعلا وصف الكفار بالإعراض، فقال تعالى: والذين كفروا عما أُنذروا معرضون، وقال تعالى: ومن أظلم ممن ذُكّر بآيات ربه ثم أعرض عنها. والإعراض نوعان: إعراض سمع: أن يأبى عن استماع الحق، فلا يصغي إليه ولا يلتفت إليه البتة. وإعراض قبول: حيث (غير واضح في التسجيل) يسمع ولكن لا يقبل، كما كان كفار قريش يسمعون من النبي صلى الله عليه وسلم، وكان اليهود يسمعون من النبي صلى الله عليه وسلم، وكان يذكّرهم (غير واضح في التسجيل) يقولون: نسمع، يعني نسمع بآذاننا، بمعنى أنهم لا يقبلون، كالمنافقين يقولون: سمعنا وعصينا، واسمع (غير واضح في التسجيل) مسمع، وراعنا ليًّا بألسنتهم. فهؤلاء يسمعون ولكن لا يستجيبون، فهؤلاء معرضون إعراض استجابة، وهؤلاء شرّ الدواب عند الله، كما قال تعالى: إن شر الدواب عند الله الصم البكم الذين لا يعقلون ولو علم الله فيهم خيرًا لأسمعهم ولو أسمعهم لتولّوا وهم معرضون. ولذلك الله جل وعلا قال بعد ذلك: يا أيها الناس استجيبوا لله وللرسول إذا دعاكم لما يحييكم، أي لما فيه حياتكم وعزّكم وسعادتكم الدنيوية والأخروية، ولا سعادة دنيوية وأخروية إلا بالاستجابة لأمر الله وأمر رسوله صلى الله عليه وسلم.
+
+وقد أجمع أهل السنة والجماعة (غير واضح في التسجيل) من نواقض الإسلام — أي يقصد العملية؛ لأن هذا هو الذي نازع فيه الجهمية — أنه لا يُشترط في ذلك استحلاله؛ فلذلك لو سجد للقبر، أو سجد للصنم، أو بدّل شريعة الله (غير واضح في التسجيل) القوانين الوضعية، أو اعتقد بأن القوانين أهدى من الشريعة الإلهية، أو عمل بمقتضى ذلك ولو لم يعتقد، أو ناصر الكفار على المسلمين ولو ادّعى أنه لا يحب الكافرين، بل لو كان يلعنهم ويسبّهم، أو قال بأن الله ثالث ثلاثة وقال: أنا لا أعتقد، أو (غير واضح في التسجيل) بالله وبرسوله وقال: أنا لا أعتقد، فهؤلاء لا يُقبل منهم ذلك.
+
+وقد أجمع أهل السنة على أنه لا يُشترط في ذلك الاعتقاد؛ لأن الاعتقاد كفر مستقل، الاعتقاد كفر مستقل؛ بمعنى لو اعتقد العبد في قلبه أن الله ثالث ثلاثة كفر ولو لم يتكلم. فصار إذا كفر الاعتقاد (غير واضح في التسجيل) فلا معنى حينئذ للعمل؛ والرجل يبدّل دين الله أو يعين الكافرين (غير واضح في التسجيل)، (غير واضح في التسجيل) في الروضة في المسجد وأحبّ دين الكفار صار من المنافقين الخُلّص المجمع على ردتهم، فما كان إذًا للعمل (غير واضح في التسجيل)، مع أن الله جل وعلا قال: ولقد قالوا كلمة الكفر وكفروا بعد إسلامهم. فمناط الكفر كما هو صريح القرآن هو بالقول وليس بالاعتقاد.
+
+والذين قالوا: ما رأينا مثل قرّائنا هؤلاء أرغب (غير واضح في التسجيل) ولا أكذب ألسنًا ولا أجبن عند اللقاء، هؤلاء أنزل الله فيهم قرآنًا وبيانًا في ردتهم، مع أنهم كانوا خرجوا مع النبي مجاهدين ومقاتلين في سبيل الله، وقالوا هذا حين قفولهم من غزوة تبوك، وزعموا أنهم يقولون هذا على وجه اللعب والمزح لا يقصدون حقيقته، وأنزل الله فيهم القرآن بردتهم: قل أبالله وآياته ورسوله كنتم تستهزئون لا تعتذروا قد كفرتم بعد إيمانكم. أثبت الله لهم الإيمان بنص القرآن، أثبت الله لهم الإيمان بنص القرآن، وأنهم كفروا بسبب كلمة قالوها على وجه المزح وعلى وجه اللعب، ولم يذكر الله ولا رسوله شرط الاعتقاد، ولا شرط الاستحلال، ولا شرط الجحود؛ لأن هذه نواقض مستقلة، لأن هذه نواقض مستقلة.
+
+والذي يتفق عليه أهل السنة والجماعة أيضًا (غير واضح في التسجيل) أن الكفر هو كل قول أو فعل أو اعتقاد يناقض أصل الإيمان؛ الاعتقاد شيء، والعمل شيء، والجحود شيء آخر، فقد تجتمع هذه الأمور وقد تفترق.
+
+إذًا قال الله جل وعلا: أليس في جهنم مثوى للمتكبرين، أي هؤلاء المستكبرون عن شرع الله؛ فكل من دُعي إلى شرع الله وأبى فإنه يُعدّ مستكبرًا، وهذا أشد عقوبة من الذين (غير واضح في التسجيل).
+
+</div>
+
+</div>
+
+## Source: The 15th Open Session of Shaykh Sulayman al-'Alwan
