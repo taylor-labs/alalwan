@@ -3,6 +3,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add(".claude/**");
   eleventyConfig.addPassthroughCopy("static");
   eleventyConfig.addFilter("limit", (arr, n) => arr.slice(0, n));
+  eleventyConfig.addFilter("findBy", (arr, key, val) => (arr || []).find((x) => x[key] === val));
+  eleventyConfig.addFilter("whereData", (arr, key, val) => (arr || []).filter((i) => i.data[key] === val));
   eleventyConfig.addFilter("readableDate", (date) =>
   new Date(date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })
   );

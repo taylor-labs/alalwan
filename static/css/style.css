@@ -386,6 +386,227 @@ li { margin-bottom: 0.4rem; }
   box-shadow: var(--shadow-sm);
 }
 
+/* === Fatawa filters === */
+.fatawa-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.fatawa-filters .sort-toggle { margin-top: 0; }
+
+.filter-select {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.85rem;
+  color: var(--text);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.75rem;
+  cursor: pointer;
+}
+
+html[data-lang="ar"] .filter-select { font-family: 'Cairo', 'Inter', sans-serif; }
+
+.filter-select:focus-visible { outline: none; border-color: var(--accent); }
+
+.filter-count {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.8rem;
+  color: var(--faint);
+  margin: 0.75rem 0 0;
+  min-height: 1.2em;
+}
+
+.entry-list li[hidden] { display: none; }
+
+/* === Reading view (English / side by side / Arabic) === */
+.reading-view { margin: 0; }
+.reading-view[hidden] { display: none; }
+.reading-view button[lang="ar"] { font-family: 'Cairo', 'Inter', sans-serif; }
+
+.parallel { display: none; }
+.prose.is-parallel { max-width: none; }
+.prose.is-parallel > [data-lang-en],
+.prose.is-parallel > [data-lang-ar] { display: none; }
+.prose.is-parallel .parallel { display: block; }
+
+.parallel-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.parallel-row:first-child { border-top: none; padding-top: 0; }
+.parallel-row > div > :last-child { margin-bottom: 0; }
+.parallel-en { text-align: left; }
+.parallel-ar { font-size: 1.2em; line-height: 2; }
+
+@media (max-width: 700px) {
+  .fatawa-filters .sort-toggle { flex-wrap: wrap; }
+  .parallel-row { grid-template-columns: 1fr; gap: 0.75rem; }
+  html[data-lang="ar"] .parallel-ar { order: -1; }
+}
+
+/* === Fatwa tools: reading view, citation, sharing === */
+.prose-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1.75rem;
+}
+
+.share-tools { display: flex; gap: 0.5rem; }
+
+.tool-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 34px;
+  padding: 0 0.8rem;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--muted);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+}
+
+html[data-lang="ar"] .tool-btn { font-family: 'Cairo', 'Inter', sans-serif; }
+.tool-btn:hover { color: var(--text); background: var(--surface2); }
+.tool-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+/* Per-paragraph link: in the margin on hover-capable screens, inline at the end on touch */
+.prose [data-para] { position: relative; }
+
+.para-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  margin-inline-start: 0.35rem;
+  padding: 0;
+  vertical-align: middle;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: var(--faint);
+  opacity: 0.55;
+  cursor: pointer;
+}
+
+.para-link svg { width: 13px; height: 13px; }
+.para-link:hover, .para-link:focus-visible { color: var(--text); background: var(--surface2); opacity: 1; outline: none; }
+
+@media (hover: hover) and (min-width: 701px) {
+  .para-link {
+    position: absolute;
+    top: 0.35em;
+    inset-inline-start: -2rem;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+  .prose [data-para]:hover > .para-link,
+  .para-link:focus-visible { opacity: 1; }
+}
+
+.para-flash { animation: para-flash 2s ease-out; border-radius: 6px; }
+
+@keyframes para-flash {
+  0%, 30% { background: var(--surface2); box-shadow: 0 0 0 0.5rem var(--surface2); }
+  100% { background: transparent; box-shadow: 0 0 0 0.5rem transparent; }
+}
+
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translate(-50%, 0.5rem);
+  padding: 0.55rem 1rem;
+  background: var(--accent);
+  color: var(--bg);
+  border-radius: 100px;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.85rem;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 300;
+}
+
+html[data-lang="ar"] .toast { font-family: 'Cairo', 'Inter', sans-serif; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .para-flash { animation: none; }
+  .toast { transition: none; }
+}
+
+/* === Session navigator (other fatawa from the same session) === */
+.session-nav {
+  margin-top: 3rem;
+  max-width: 680px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+html[data-lang="ar"] .session-nav { font-family: 'Cairo', 'Inter', sans-serif; }
+
+.session-nav summary {
+  padding: 0.85rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.session-nav ol {
+  margin: 0;
+  padding: 0 1.1rem 0.5rem;
+  list-style: none;
+  counter-reset: q;
+}
+
+.session-nav li {
+  counter-increment: q;
+  display: flex;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0.45rem 0;
+  border-top: 1px solid var(--border);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.session-nav li::before {
+  content: counter(q);
+  min-width: 1.4em;
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.session-nav li a { color: var(--muted); text-decoration: none; }
+.session-nav li a:hover { color: var(--text); }
+.session-nav li.current a { color: var(--text); font-weight: 600; }
+
+.session-nav-all {
+  display: inline-block;
+  margin: 0 1.1rem 0.9rem;
+  font-size: 0.8rem;
+  color: var(--faint);
+}
+
 /* === Search === */
 .search-container {
   margin-top: 2rem;
@@ -575,7 +796,7 @@ a.search-result:focus-visible {
   transition: color 0.15s;
 }
 
-.prose-back-ar {
+html[data-lang="ar"] .prose-back-ar {
   display: inline-flex;
   align-items: center;
   gap: 0.35em;

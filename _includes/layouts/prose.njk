@@ -1,11 +1,51 @@
 ---
 layout: layouts/base.njk
 ---
+{%- set sess = sessions | findBy("number", session) -%}
+{%- set pageUrl = "https://al-alwan.com" + page.url -%}
+{%- set citeEn -%}Shaykh Sulayman ibn Nasir al-Alwan, "{{ title | replace("\"", "'") | safe }}"{% if sess %}, {{ sess.name | safe }}{% endif %}. {{ pageUrl }}{%- endset -%}
+{%- set citeAr -%}الشيخ سليمان بن ناصر العلوان، «{{ (title_ar or title) | safe }}»{% if sess %}، {{ sess.name_ar | safe }}{% endif %}. {{ pageUrl }}{%- endset -%}
 <a href="/fatawa/" class="prose-back" data-pagefind-ignore>
   <span data-lang-en>&#8592; Back to Fatawa</span>
   <span data-lang-ar lang="ar" dir="rtl" class="ar-label prose-back-ar"><span>&#8594;</span><span>العودة إلى الفتاوى</span></span>
 </a>
 {% if date_added %}<p class="entry-meta" data-pagefind-ignore><span data-lang-en>Added {{ date_added | readableDate }}</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">أُضيف بتاريخ {{ date_added | readableDate }}</span></p>{% endif %}
+<div class="prose-tools" data-pagefind-ignore>
+  {% if language == "ar-en" %}
+  <div class="sort-toggle reading-view" id="reading-view" role="group" aria-label="Reading view" hidden>
+    <button type="button" data-view="en">English</button>
+    <button type="button" data-view="both"><span data-lang-en>Side by side</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">جنبًا إلى جنب</span></button>
+    <button type="button" data-view="ar" lang="ar">العربية</button>
+  </div>
+  {% endif %}
+  <div class="share-tools" id="share-tools"
+    data-url="{{ pageUrl | escape }}"
+    data-citation-en="{{ citeEn | escape }}"
+    data-citation-ar="{{ citeAr | escape }}">
+    <button type="button" class="tool-btn" data-action="cite"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5" y="5" width="8.5" height="8.5" rx="1.5"/><path d="M10.5 5V3.5A1.5 1.5 0 0 0 9 2H3.5A1.5 1.5 0 0 0 2 3.5V9a1.5 1.5 0 0 0 1.5 1.5H5"/></svg><span data-lang-en>Copy citation</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">نسخ التوثيق</span></button>
+    <button type="button" class="tool-btn" data-action="share"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6.5 9.5a3 3 0 0 0 4.24 0l2.12-2.12a3 3 0 0 0-4.24-4.24l-.7.7"/><path d="M9.5 6.5a3 3 0 0 0-4.24 0L3.14 8.62a3 3 0 0 0 4.24 4.24l.7-.7"/></svg><span data-lang-en>Share link</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">مشاركة الرابط</span></button>
+  </div>
+</div>
 <div class="prose">
   {{ content | safe }}
 </div>
+{%- if sess %}
+{%- set siblings = collections.fatawa | whereData("session", session) %}
+{%- if siblings.length > 1 %}
+<details class="session-nav" data-pagefind-ignore>
+  <summary>
+    <span data-lang-en>More from the {{ sess.name }} ({{ siblings.length }})</span>
+    <span data-lang-ar lang="ar" dir="rtl" class="ar-label">المزيد من {{ sess.name_ar }} ({{ siblings.length }})</span>
+  </summary>
+  <ol>
+    {%- for f in siblings %}
+    <li{% if f.url == page.url %} class="current" aria-current="page"{% endif %}><a href="{{ f.url }}"><span data-lang-en>{{ f.data.title }}</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">{{ f.data.title_ar or f.data.title }}</span></a></li>
+    {%- endfor %}
+  </ol>
+  <a class="session-nav-all" href="/fatawa/sessions/{{ session }}/"><span data-lang-en>View session page</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">صفحة الجلسة</span></a>
+</details>
+{%- endif %}
+{%- endif %}
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/static/js/share.js"></script>
+{% if language == "ar-en" %}<script src="/static/js/parallel.js"></script>{% endif %}
