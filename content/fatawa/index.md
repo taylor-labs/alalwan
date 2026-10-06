@@ -1,4 +1,5 @@
 ---
+searchable: false
 layout: layouts/base.njk
 title: Fatawa
 title_ar: "الفتاوى"

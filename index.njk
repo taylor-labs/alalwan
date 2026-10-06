@@ -13,7 +13,7 @@ title: Shaykh Sulayman al-Alwan
     <span data-lang-ar lang="ar" dir="rtl" class="ar-label">الفتاوى والمحاضرات والكتابات — بالعربية والإنجليزية.</span>
   </p>
   <div class="search-container">
-    <input type="search" id="search-input" data-placeholder-en="Search fatawa, sciences, biography…" data-placeholder-ar="ابحث في الفتاوى والعلوم والسيرة الذاتية…" placeholder="Search fatawa, sciences, biography…" autocomplete="off">
+    <input type="search" id="search-input" class="search-input" data-placeholder-en="Search fatawa, biography…" data-placeholder-ar="ابحث في الفتاوى والسيرة الذاتية…" placeholder="Search fatawa, biography…" autocomplete="off" aria-label="Search">
     <div class="search-results" id="search-results"></div>
   </div>
 </div>
@@ -86,40 +86,8 @@ title: Shaykh Sulayman al-Alwan
   });
 })();
 
-(function () {
-  const input = document.getElementById('search-input');
-  const results = document.getElementById('search-results');
-  let index = null;
-
-  input.addEventListener('input', function () {
-    const q = this.value.trim().toLowerCase();
-    results.innerHTML = '';
-    if (!q) return;
-    if (!index) {
-      fetch('/search-index.json')
-        .then(r => r.json())
-        .then(data => { index = data; render(q); });
-    } else {
-      render(q);
-    }
-  });
-
-  var resultTypeAr = { fatwa: 'فتوى', scholar: 'عالم', poem: 'قصيدة', book: 'كتاب', poet: 'شاعر' };
-
-  function render(q) {
-    var isAr = document.documentElement.getAttribute('data-lang') === 'ar';
-    const hits = index.filter(item =>
-      item.title.toLowerCase().includes(q) || (item.title_ar && item.title_ar.includes(q))
-    ).slice(0, 10);
-    if (!hits.length) {
-      results.innerHTML = '<p class="search-result">' + (isAr ? 'لا توجد نتائج.' : 'No results.') + '</p>';
-      return;
-    }
-    results.innerHTML = hits.map(item => {
-      var label = isAr && item.title_ar ? item.title_ar : item.title;
-      var dir = isAr && item.title_ar ? ' dir="rtl"' : '';
-      return `<a class="search-result"${dir} href="${item.url}"><span class="result-type">${isAr ? (resultTypeAr[item.type] || item.type) : item.type}</span>${label}</a>`;
-    }).join('');
-  }
-})();
+// search.js loads at the end of the layout, after this page script
+document.addEventListener('DOMContentLoaded', function () {
+  alwanSearch.attach(document.getElementById('search-input'), document.getElementById('search-results'));
+});
 </script>

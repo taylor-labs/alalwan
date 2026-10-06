@@ -2,5 +2,7 @@
   "tags": ["scholars"],
   "layout": "layouts/base.njk",
   "permalink": "/scholars/{{ page.fileSlug }}/",
-  "nav": false
+  "nav": false,
+  "searchable": true,
+  "search_type": "scholar"
 }

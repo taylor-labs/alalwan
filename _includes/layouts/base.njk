@@ -48,6 +48,7 @@
       <a href="/about/"><span data-lang-en>About</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">حول</span></a>
     </nav>
     <div class="header-right">
+      <button class="search-toggle" id="search-toggle" aria-label="Search" title="Search (Ctrl+K)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="7" cy="7" r="4.75"/><path d="M10.5 10.5 14 14"/></svg></button>
       <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">AR</button>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"></button>
       <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -65,7 +66,17 @@
     <a href="/about/"><span data-lang-en>About</span><span data-lang-ar lang="ar" dir="rtl" class="ar-label">حول</span></a>
   </div>
 
-  <main>
+  <dialog class="search-dialog" id="search-dialog" aria-label="Search">
+    <input type="search" class="search-input" data-placeholder-en="Search fatawa, biography…" data-placeholder-ar="ابحث في الفتاوى والسيرة الذاتية…" placeholder="Search fatawa, biography…" autocomplete="off" aria-label="Search">
+    <div class="search-results"></div>
+  </dialog>
+
+  <main{% if searchable %} data-pagefind-body{% endif %}>
+    {%- if searchable %}
+    <span hidden data-pagefind-meta="title:{{ title }}"></span>
+    {%- if title_ar %}<span hidden data-pagefind-meta="title_ar:{{ title_ar }}"></span>{% endif %}
+    <span hidden data-pagefind-meta="type:{{ search_type or 'page' }}"></span>
+    {%- endif %}
     {{ content | safe }}
   </main>
 
@@ -188,5 +199,6 @@
       }
     });
   </script>
+  <script src="/static/js/search.js"></script>
 </body>
 </html>

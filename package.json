@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx eleventy --serve",
-    "build": "npx eleventy"
+    "start": "eleventy && uvx --from 'pagefind[bin]==1.5.2' python -m pagefind --site _site && eleventy --serve",
+    "build": "eleventy && uvx --from 'pagefind[bin]==1.5.2' python -m pagefind --site _site"
   },
   "keywords": [],
   "author": "",

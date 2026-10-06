@@ -7,6 +7,15 @@ module.exports = function (eleventyConfig) {
   new Date(date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })
   );
 
+  // Bilingual headings render as <span en>…</span><span ar>…</span> with no gap,
+  // which the search indexer reads as one word. Separate them inside headings.
+  eleventyConfig.addTransform("heading-lang-gap", (content, outputPath) => {
+    if (!outputPath || !outputPath.endsWith(".html")) return content;
+    return content.replace(/<h([1-6])\b[^>]*>[\s\S]*?<\/h\1>/g, (h) =>
+      h.replace(/<\/span><span data-lang-ar/g, "</span> <span data-lang-ar")
+    );
+  });
+
   // Scholars
   eleventyConfig.addCollection("scholars", (api) => {
   return api.getFilteredByTag("scholars");

@@ -1,4 +1,5 @@
 ---
+searchable: true
 layout: layouts/base.njk
 title: About
 title_ar: "حول"

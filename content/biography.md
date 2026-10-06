@@ -1,4 +1,5 @@
 ---
+searchable: true
 layout: layouts/base.njk
 title: Biography
 title_ar: "السيرة الذاتية"

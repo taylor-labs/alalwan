@@ -1,4 +1,6 @@
 {
   "layout": "layouts/prose.njk",
-  "source": "40th Open Session"
+  "source": "40th Open Session",
+  "searchable": true,
+  "search_type": "fatwa"
 }
